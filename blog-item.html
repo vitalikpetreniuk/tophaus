@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>TOPHAUS - BLOG ITEM</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+	<!-- Custom HTML -->
+	<div id="wrapper">
+		<header id="header">
+			<div class="container">
+				<div id="mainmenu">
+					<button id="th-open">Меню</button>
+				</div>
+				<div id="logo">
+					<a href="/">
+						<img src="img/homepage/logo.png" alt="logo">
+					</a>
+				</div>
+				<div id="contact">
+					<a href="tel:+380441234545">(044) 123 45 45</a>
+				</div>
+			</div>
+			<div id="th-menu">
+				<div class="container">
+					<div id="th-close"><img src="img/homepage/icons/close.png" alt="close"></div>
+					<ul class="nav">
+						<li><a href="#">Преимущества</a></li>
+						<li><a href="#">Наши работы</a></li>
+						<li><a href="#">О нас</a></li>
+						<li><a href="#">Вопрос-ответ</a></li>
+					</ul>
+					<div class="contact-us">
+						<div class="header-phone"><a href="tel:+380441234545">(044) 123 45 45</a></div>
+						<div class="header-social">
+							<span>Соц. Сети:</span>
+
+							<ul>
+								<li class="youtube"><a href="#"><img src="img/homepage/icons/youtube.png" alt="youtube"></a></li>
+								<li class="instagram"><a href="#"><img src="img/homepage/icons/instagram.png" alt="youtube"></a></li>
+								<li class="facebook"><a href="#"><img src="img/homepage/icons/facebook.png" alt="facebook"></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div id="th-blog">
+			<div class="container">
+				<div class="th-blog">
+					<div class="blog-item">
+						<div class="image">
+							<img src="img/blog-image.jpg" alt="blog image">
+
+							<div class="bli-date">
+								<span class="date">04</span>
+								<span class="month">окт</span>
+								<span class="year">2019</span>
+							</div>
+						</div>
+						<h2 class="title">В какое время года лучше построить бассейн?</h2>
+						<div class="text">
+							<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
+							<p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. </p>
+						</div>
+					</div>
+				</div>
+				<div class="th-sidebar">
+					<div class="fresh-posts">
+						<h3>Свежие записи</h3>
+
+						<ul>
+							<li class="fp-item">
+								<a href="#">В какое время года лучше построить бассейн?</a>
+							</li>
+							<li class="fp-item">
+								<a href="#">Выбор места для строительства бассейна</a>
+							</li>
+							<li class="fp-item">
+								<a href="#">Основные этапы строительства бассейнов</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="th-prefooter">
+			<div class="container">
+				<div class="pf-map">
+					<div id="map" style="height: 432px;"></div>
+					<script>
+						var map;
+						function initMap() {
+
+							var myStyles =[
+								{
+									featureType: "poi",
+									elementType: "labels",
+									stylers: [
+										{ visibility: "off" }
+									]
+								}
+							];
+
+							map = new google.maps.Map(
+									document.getElementById('map'),
+									{
+										center: new google.maps.LatLng(50.429594, 30.510676),
+										zoom: 15,
+										styles: myStyles
+									});
+
+							var iconBase =
+									'http://md.ninesquares.biz/tophaus/img/homepage/';
+
+							var icons = {
+								info: {
+									icon: iconBase + 'map-icon.png'
+								}
+							};
+
+							var features = [
+								{
+									position: new google.maps.LatLng(50.429949, 30.514534),
+									type: 'info'
+								}
+							];
+
+							// Create markers.
+							for (var i = 0; i < features.length; i++) {
+								var marker = new google.maps.Marker({
+									position: features[i].position,
+									icon: icons[features[i].type].icon,
+									map: map
+								});
+							};
+						}
+					</script>
+					<script async defer
+							src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBy6FZXG8nrWxmh5VqRhAToLhM7biQuH70&callback=initMap">
+					</script>
+
+					<img class="map-image" src="img/homepage/map_image.jpg" alt="map-image">
+				</div>
+				<div class="pf-contacts">
+					<h2>Контакты</h2>
+
+					<ul>
+						<li class="address">0315, г. Киев, ул. Деловая 13,</li>
+						<li class="phone">тел.: <a href="tel:+380443372032">(044) 337-20-32</a></li>
+						<li class="email"><a href="mailto:pool@tophaus.com.ua">pool@tophaus.com.ua</a></li>
+						<li class="hours">с 9:00 до 19:00, пн-пт</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<footer id="th-footer">
+			<div class="container">
+				<div class="foo-logo">
+					<a href="/"><img src="img/homepage/icons/foo-logo.png" alt="logo"></a>
+				</div>
+				<div class="foo-social">
+					<span>Соц. Сети:</span>
+
+					<ul>
+						<li class="youtube"><a href="#"><img src="img/homepage/icons/youtube.png" alt="youtube"></a></li>
+						<li class="instagram"><a href="#"><img src="img/homepage/icons/instagram.png" alt="youtube"></a></li>
+						<li class="facebook"><a href="#"><img src="img/homepage/icons/facebook.png" alt="facebook"></a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>
